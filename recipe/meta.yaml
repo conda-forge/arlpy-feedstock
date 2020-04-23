@@ -1,4 +1,4 @@
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: arlpy
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/arlpy/arlpy-{{ version }}.tar.gz
-  sha256: f4f60af4d6990a31e584e81cfeafede6fddceccca7a681e3de316ba70d826759
+  sha256: 0f8febcba26ef5deef523856b7b8e7a57ae880618c4f08ac4d2ef61354ddd9d4
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "ARL Python Tools"
+  summary: ARL Python Tools
 
 extra:
   recipe-maintainers:
