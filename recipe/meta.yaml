@@ -19,15 +19,20 @@ requirements:
     - pip
   run:
     - python
-    - bokeh >=1.2.0
-    - numpy >=1.16.2
-    - pandas >=0.23.4
-    - scipy >=1.2.1
-    - utm >=0.4.2
+    - bokeh >=1.4.0
+    - numpy >=1.18.1
+    - pandas >=1.0.1
+    - scipy >=1.4.1
+    - utm >=0.5.0
 
 test:
   imports:
     - arlpy
+  commands:
+    - pip check
+  requires:
+    - pip
+
 
 about:
   home: https://github.com/org-arl/arlpy
