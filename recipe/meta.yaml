@@ -1,4 +1,4 @@
-{% set version = "1.8.0" %}
+{% set version = "1.8.2" %}
 
 package:
   name: arlpy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/arlpy/arlpy-{{ version }}.tar.gz
-  sha256: e70005f2d2f4a040d9352bd01ad6585117a50c05c30047db3fccde0018524444
+  sha256: 3c4c28a69ceb0da0f32d8f2761f268636d0765715a5b631f244c000a1a743f56
 
 build:
   number: 0
