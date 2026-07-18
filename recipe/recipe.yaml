@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  python_min: "3.9"
+  version: "1.9.3"
+
+package:
+  name: arlpy
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/a/arlpy/arlpy-${{ version }}.tar.gz
+  sha256: 01673a34267018af3d9ec56b96ef86582254b7593c14f32778d796a8c3d3e739
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.24.0,<2.0.0
+    - scipy >=1.13.0,<1.14.0
+    - utm >=0.7.0
+    - pandas >=1.5.0
+    - bokeh >=3.0.0
+    - matplotlib-base >=3.9.0
+
+tests:
+  - python:
+      imports:
+        - arlpy
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: ARL Python Tools
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/org-arl/arlpy
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
