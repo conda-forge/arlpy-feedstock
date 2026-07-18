@@ -1,4 +1,4 @@
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 
 package:
   name: arlpy
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/arlpy/arlpy-{{ version }}.tar.gz
-  sha256: 98db62383f7e8ad453b3532ebee62d1f050365423fdb85dd3b87a7b6f832d626
+  sha256: f4deff0835d4423f39f97241170a1ccb4fe03d509dce3819a6b1c56f388e1953
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
